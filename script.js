@@ -13,7 +13,8 @@ Promise.all([
 	createPromise(2),
 	createPromise(3)
 			]).then(results => {
-	const output = document.querySelector("#output").innerHTML="";
+	const output = document.querySelector("#output");
+	output.innerHTML="";
 	
 
 	results.forEach(({promiseNumber, time}) => {
