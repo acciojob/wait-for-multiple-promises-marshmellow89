@@ -17,7 +17,7 @@ Promise.all([
 	
 
 	results.forEach(({promiseNumber, time}) => {
-		document.createElement("tr").innerHTML=`<td>Promise ${promiseNumber}</td>
+	const tr = document.createElement("tr").innerHTML=`<td>Promise ${promiseNumber}</td>
 		<td>${time}</td>`;
 		output.appendChild(tr);
 	});
