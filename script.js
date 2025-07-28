@@ -14,7 +14,7 @@ Promise.all([
 	createPromise(3)
 			]).then(results => {
 	const output = document.querySelector("#output").innerHTML="";
-	  const totalTime = Math.max(...results.map(res => parseFloat(res.time))).toFixed(3);
+	
 
 	results.forEach(({promiseNumber, time}) => {
 		document.createElement("tr").innerHTML=`<td>Promise ${promiseNumber}</td>
@@ -22,7 +22,8 @@ Promise.all([
 		output.appendChild(tr);
 	});
 
-
+  const totalTime = Math.max(...results.map(res => parseFloat(res.time))).toFixed(3);
+	
 	const totalRow = document.createElement("tr");
 	totalRow.innerHTML = `<td><strong>Total</strong></td>
 	<td><strong>${totalTime}</strong></td>`;
